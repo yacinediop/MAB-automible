@@ -1,0 +1,332 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+} */
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc800;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #ffc800;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc800;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 255, 200, 0;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 200, 0;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.html{
+    font-size: 62.5%;
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    z-index: 100;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items{
+    order: 2;
+    display: flex;
+    margin: 0 auto;
+}
+.logo{
+    order: 1;
+    font-size: 2.3rem;
+}
+
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.navbar a{
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: black;
+}
+
+/* Banner */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.col-2 {
+    flex-basis: 40%;
+    min-width: 300px;
+    
+}
+
+.col-2 img {
+    width: 100%;
+    padding: 30px 0;
+    margin-top: 10%;
+}
+
+.col-2 h1 {
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 800;
+    margin: 25px 0;
+}
+
+.col-2 a {
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #212529;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 30px;
+    transition: all 0.5s;
+}
+
+.col-2 a:hover {
+    border: 1px solid #212529;
+    background-color: transparent;
+    color: black;
+}
+/* PRODUIT */
+.produits .text-center h1,
+.boutique .text-center h1,
+.new-arrivage .text-center h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+.produits .row,
+.boutique .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    
+}
+.produits .col-4,
+.boutique .col-3{
+    flex-basis: 25%;
+    min-width: 300px;
+    margin-bottom: 10%;
+    
+}
+.produits .col-4 img{
+    width: 300px;
+    height: 300px; 
+}
+/* Boutique */
+.boutique .col-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.boutique .col-3 img{
+    width: 200px;
+    height: 200px; 
+}
+.boutique .col-3 .icon .bx {
+    color: var(--bs-yellow);
+}
+.boutique .col-3 .price h3,
+.new-arrivage .col-4 h3{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+.boutique .col-3 .price p{
+    text-align: center;
+    font-size: 15px;
+}
+.boutique .col-3 .button .btn{
+    background-color: black;
+    font-size: 15px;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    cursor: pointer;
+}
+.boutique .col-3 .button .btn:hover{
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+    border: 1PX solid #212529;
+}
+/* New Arrivage */
+.boutique .text-center h1,
+.contact .text-center h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.new-arrivage .row,
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+.new-arrivage .col-4{
+    flex-basis: 30%;
+    min-width: 300px;
+    margin-bottom: 10%;
+}
+.new-arrivage .col-4 img{
+    width: 300px;
+    height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Contact */
+
+.contact .col-6{
+    flex-basis: 40%;
+    min-width: 300px;
+    margin-bottom: 10%;
+}
+.contact .col-6 p{
+    font-size: 15px;
+}
+.contact .col-6 p span{
+    font-size: 15px;
+    font-weight: bold;
+}
+.contact .col-6 form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+}
+.contact .col-6 form .form-control{
+    width: 300px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 2%;
+}
+.contact .col-6 form .bouton .btn{
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: black;
+    width: 150px;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    margin-top: 2%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+/* Footer */
+.footer{
+    background-color: #444;
+    color: #fff;
+    padding: 50px;
+}
+.footer hr{
+    color: #fff;
+}
+.footer .copyright{
+    font-size: 15px;
+}
+.footer span{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
+
